@@ -31,7 +31,40 @@ class RAGChatbot:
             )
 
         genai.configure(api_key=api_key)
-        self.model = genai.GenerativeModel(config.gemini_model)
+
+        # Cấu hình generation để câu trả lời tự nhiên hơn
+        generation_config = genai.GenerationConfig(
+            temperature=0.7,  # Vừa đủ creative nhưng vẫn chính xác
+            top_p=0.9,
+            top_k=40,
+            max_output_tokens=1024,
+        )
+
+        # Safety settings để tránh bị block
+        safety_settings = [
+            {
+                "category": "HARM_CATEGORY_HARASSMENT",
+                "threshold": "BLOCK_NONE",
+            },
+            {
+                "category": "HARM_CATEGORY_HATE_SPEECH",
+                "threshold": "BLOCK_NONE",
+            },
+            {
+                "category": "HARM_CATEGORY_SEXUALLY_EXPLICIT",
+                "threshold": "BLOCK_NONE",
+            },
+            {
+                "category": "HARM_CATEGORY_DANGEROUS_CONTENT",
+                "threshold": "BLOCK_NONE",
+            },
+        ]
+
+        self.model = genai.GenerativeModel(
+            config.gemini_model,
+            generation_config=generation_config,
+            safety_settings=safety_settings
+        )
 
         # ===== RAG components =====
         self.loader = MarkdownLoader(config.markdown_dir)
@@ -99,27 +132,34 @@ class RAGChatbot:
         context_text = "\n\n".join(contexts)
 
         # ===== Prompt =====
-        prompt = f"""
-        Bạn là chatbot tư vấn tuyển sinh của Trường Đại học Sư phạm Hà Nội.
+        prompt = f"""Bạn là trợ lý tư vấn tuyển sinh thông minh của Trường Đại học Sư phạm Hà Nội.
 
-        NHIỆM VỤ:
-        - Trả lời thân thiện, rõ ràng, đúng vai trò tư vấn tuyển sinh
-        - Sử dụng thông tin trong NGỮ CẢNH
-        - Ưu tiên giải thích ngành học, cơ hội nghề nghiệp nếu câu hỏi chung
-        - Chỉ trả lời điểm chuẩn khi người dùng hỏi cụ thể về điểm/năm
+NHIỆM VỤ:
+- Đọc kỹ ngữ cảnh được cung cấp
+- Tổng hợp thông tin thành câu trả lời TỰ NHIÊN như người thật đang tư vấn
+- Trả lời thân thiện, chuyên nghiệp
+- CHỈ dùng thông tin từ ngữ cảnh, KHÔNG bịa đặt
 
-        KHÔNG ĐƯỢC:
-        - Bịa thông tin
-        - Trả lời ngoài dữ liệu
+QUY TẮC BẮT BUỘC:
+✗ KHÔNG copy/paste nguyên văn từ ngữ cảnh
+✗ KHÔNG dump thông tin dạng bullet points
+✗ KHÔNG trả lời chung chung
+✓ PHẢI viết thành câu văn tự nhiên, mạch lạc
+✓ Nếu hỏi về ngành: giới thiệu tổng quan + cơ hội nghề nghiệp
+✓ Nếu hỏi về điểm/chỉ tiêu: nêu con số cụ thể (nếu có)
+✓ Nếu không có thông tin: "Hiện tôi chưa có dữ liệu về... Bạn có thể liên hệ phòng tuyển sinh để biết thêm chi tiết."
 
-        NGỮ CẢNH:
-        {context_text}
+VÍ DỤ TRẢ LỜI TỐT:
+Câu hỏi: "Ngành CNTT học những gì?"
+Trả lời: "Ngành Công nghệ thông tin tại trường đào tạo các kiến thức nền tảng về lập trình, cơ sở dữ liệu, mạng máy tính và phát triển phần mềm. Sinh viên sẽ được học cả lý thuyết và thực hành qua các dự án thực tế. Sau khi tốt nghiệp, bạn có thể làm việc tại các công ty công nghệ, ngân hàng, hoặc trở thành giáo viên Tin học."
 
-        CÂU HỎI:
-        {question}
+NGỮ CẢNH THAM KHẢO:
+{context_text}
 
-        TRẢ LỜI (giọng tư vấn, tiếng Việt, tự nhiên):
-        """
+CÂU HỎI:
+{question}
+
+TRẢ LỜI (ngắn gọn, tự nhiên):"""
 
         # ===== Generate =====
         try:

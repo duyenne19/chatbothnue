@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/user/chatbothnue/run_evaluation.py", line 12, in <module>
+    from evaluation.optimizer import RAGOptimizer
+  File "/home/user/chatbothnue/evaluation/optimizer.py", line 12, in <module>
+    from rag.simple_vector_store import SimpleVectorStore
+ModuleNotFoundError: No module named 'rag.simple_vector_store'

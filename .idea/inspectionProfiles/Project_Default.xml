@@ -1,0 +1,42 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <list>
+          <option value="langchain" />
+          <option value="langchain-community" />
+          <option value="langchain-google-genai" />
+          <option value="google-generativeai" />
+          <option value="chromadb" />
+          <option value="sentence-transformers" />
+          <option value="selenium" />
+          <option value="lxml" />
+          <option value="pandas" />
+          <option value="streamlit" />
+          <option value="streamlit-chat" />
+          <option value="python-dotenv" />
+          <option value="pydantic" />
+          <option value="pydantic-settings" />
+          <option value="colorlog" />
+          <option value="python-json-logger" />
+          <option value="ollama" />
+          <option value="pypdf" />
+          <option value="unstructured" />
+          <option value="pytest" />
+          <option value="pytest-cov" />
+          <option value="black" />
+          <option value="flake8" />
+          <option value="pylint" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="google.genai" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>

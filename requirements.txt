@@ -1,0 +1,22 @@
+protobuf~=5.29.5
+python-dotenv~=1.2.1
+requests~=2.32.5
+beautifulsoup4~=4.14.3
+# =========================
+# Core
+# =========================
+requests
+beautifulsoup4
+
+# =========================
+# RAG / NLP
+# =========================
+sentence-transformers
+faiss-cpu
+numpy
+
+# =========================
+# LLM / Gemini
+# =========================
+google-generativeai
+python-dotenv

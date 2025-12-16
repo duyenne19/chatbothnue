@@ -8,7 +8,8 @@ import google.generativeai as genai
 from rag.config import RAGConfig
 from rag.markdown_loader import MarkdownLoader
 from rag.text_chunker import TextChunker
-from rag.vector_store import VectorStore
+# from rag.vector_store import VectorStore  # Cần HuggingFace model
+from rag.simple_vector_store import SimpleVectorStore as VectorStore  # OFFLINE mode
 
 
 class RAGChatbot:

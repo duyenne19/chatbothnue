@@ -115,6 +115,12 @@ if __name__ == "__main__":
     urls = [
         "https://tuyensinh.hnue.edu.vn/tuyensinh2025/545",
         "https://tuyensinh.hnue.edu.vn/khungchuongtrinh/320",
+        "https://tuyensinh.hnue.edu.vn/tuyensinh2025/544",
+        "https://tuyensinh.hnue.edu.vn/tuyensinh2025/533",
+        "https://tuyensinh.hnue.edu.vn/khungchuongtrinh/319",
+        "https://hnue.edu.vn/tin-tuc/10678",
+        "https://hnue.edu.vn/tin-tuc/10732"
+
         # thêm link ở đây
     ]
 

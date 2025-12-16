@@ -1,24 +1,37 @@
-# rag/markdown_loader.py
-from pathlib import Path
-
+import os
 
 class MarkdownLoader:
-    def __init__(self, base_dir: str):
-        # 🔥 FIX QUAN TRỌNG: resolve path tuyệt đối
-        self.base_dir = Path(base_dir).resolve()
+    def __init__(self, data_dir: str):
+        self.data_dir = data_dir
 
-    def load(self) -> list[str]:
-        texts = []
+    def load(self):
+        documents = []
 
-        print(f"📂 Đang tìm Markdown trong: {self.base_dir}")
+        if not os.path.exists(self.data_dir):
+            raise RuntimeError(f"❌ Thư mục không tồn tại: {self.data_dir}")
 
-        for md_file in self.base_dir.rglob("*.md"):
-            try:
-                text = md_file.read_text(encoding="utf-8")
-                texts.append(text)
-                print(f"✅ Load: {md_file}")
-            except Exception as e:
-                print(f"❌ Lỗi đọc {md_file}: {e}")
+        for root, _, files in os.walk(self.data_dir):
+            for file in files:
+                if not file.lower().endswith(".md"):
+                    continue
+                path = os.path.join(root, file)
+                try:
+                    with open(path, "r", encoding="utf-8") as f:
+                        content = f.read().strip()
+                except Exception as e:
+                    print(f"⚠️ Không đọc được file: {path} | {e}")
+                    continue
 
-        print(f"📄 Đã load {len(texts)} file Markdown")
-        return texts
+                if not content:
+                    continue
+
+                documents.append({
+                    "content": content,
+                    "source": os.path.normpath(path)
+                })
+                print(f"✅ Load: {path}")
+
+        if not documents:
+            raise RuntimeError("❌ Không có file Markdown hợp lệ")
+
+        return documents

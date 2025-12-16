@@ -1,42 +1,52 @@
-# rag/vector_store.py
-import numpy as np
 import faiss
 from sentence_transformers import SentenceTransformer
 
-
 class VectorStore:
-    def __init__(self, model_name: str):
-        self.model = SentenceTransformer(model_name)
+    def __init__(self, embedding_model: str):
+        self.model = SentenceTransformer(embedding_model)
         self.index = None
-        self.texts = []
+        self.chunks = []
 
-    def build(self, texts: list[str]):
+    def build(self, chunks):
+        if not chunks:
+            raise RuntimeError("❌ Không có chunk để build vector store")
+
+        texts = [c["content"] for c in chunks]
         print("🔎 Đang tạo embedding...")
 
-        self.texts = texts
-        embeddings = self.model.encode(texts, show_progress_bar=True)
-        embeddings = np.array(embeddings).astype("float32")
-
-        faiss.normalize_L2(embeddings)
+        embeddings = self.model.encode(
+            texts,
+            show_progress_bar=True,
+            convert_to_numpy=True,
+            normalize_embeddings=True
+        )
 
         dim = embeddings.shape[1]
         self.index = faiss.IndexFlatIP(dim)
         self.index.add(embeddings)
+        self.chunks = chunks
 
-        print(f"✅ FAISS index: {self.index.ntotal} vectors")
+        print(f"✅ FAISS index: {len(chunks)} vectors")
 
-    def search(self, query: str, k: int = 3) -> list[str]:
-        if not self.index:
-            return []
+    def search(self, query: str, top_k: int = 3):
+        if self.index is None:
+            raise RuntimeError("❌ Vector store chưa được build")
 
-        q_emb = self.model.encode([query]).astype("float32")
-        faiss.normalize_L2(q_emb)
+        top_k = min(top_k, len(self.chunks))
+        q_emb = self.model.encode(
+            [query],
+            convert_to_numpy=True,
+            normalize_embeddings=True
+        )
 
-        scores, indices = self.index.search(q_emb, k)
-
+        scores, indices = self.index.search(q_emb, top_k)
         results = []
-        for idx in indices[0]:
-            if idx < len(self.texts):
-                results.append(self.texts[idx])
+
+        for score, idx in zip(scores[0], indices[0]):
+            results.append({
+                "content": self.chunks[idx]["content"],
+                "source": self.chunks[idx]["source"],
+                "score": float(score)
+            })
 
         return results

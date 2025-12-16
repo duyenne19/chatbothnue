@@ -4,29 +4,235 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="37150ee4-5fb4-4853-959b-8dd1da5e3c2a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/PythonProject1.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cli/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crawler/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crawler/config.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crawler/web_crawler.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rag/config.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rag/markdown_loader.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rag/rag_chatbot.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rag/text_chunker.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rag/vector_store.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_crawl.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_env.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_import.py" afterDir="false" />
+    <list default="true" id="37150ee4-5fb4-4853-959b-8dd1da5e3c2a" name="Changes" comment="chat_goc">
+      <change afterPath="$PROJECT_DIR$/data/bio.hnue.edu.vn/content.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/bio.hnue.edu.vn/metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/dialy.hnue.edu.vn/content.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/dialy.hnue.edu.vn/metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/downloads/tuyensinh.hnue.edu.vn/api/v1/Portals/0/1-Quyet-dinh-cho-phep-dao-tao-SP-KHTN.pdf/1-Quyet-dinh-cho-phep-dao-tao-SP-KHTN.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/downloads/tuyensinh.hnue.edu.vn/api/v1/Portals/0/1_-309_QD_DHSPHN_22_01_2025_QD-m-nganh-Cong-ngh-sinh-hc.pdf/1_ 309_QD_DHSPHN_22_01_2025_QD m nganh Cong ngh sinh hc.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/downloads/tuyensinh.hnue.edu.vn/api/v1/Portals/0/1_-[SP_22]D-an-m-nganh-Xa-hi-hc.pdf/1_ [SP_22]D an m nganh Xa hi hc.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/downloads/tuyensinh.hnue.edu.vn/api/v1/Portals/0/1_-[SP_22]_D-an-m-nganh-Cong-ngh-sinh-hc.pdf/1_ [SP_22]_D an m nganh Cong ngh sinh hc.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/downloads/tuyensinh.hnue.edu.vn/api/v1/Portals/0/1_-[SP_22]_D-an-m-nganh-Vt-li-hc.pdf/1_ [SP_22]_D an m nganh Vt li hc.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/downloads/tuyensinh.hnue.edu.vn/api/v1/Portals/0/1_-[sp_22]_D-an-m-nganh-TV-va-van-hoa-VN.pdf/1_ [sp_22]_D an m nganh TV va van hoa VN.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/downloads/tuyensinh.hnue.edu.vn/api/v1/Portals/0/1_[SP_22]-D-an-m-nganh-Lch-s.pdf/1_[SP_22] D an m nganh Lch s.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/downloads/tuyensinh.hnue.edu.vn/api/v1/Portals/0/2-De-an-mo-nganh-SP-KHTN.pdf/2-De-an-mo-nganh-SP-KHTN.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/downloads/tuyensinh.hnue.edu.vn/api/v1/Portals/0/2_-310_QD_DHSPHN_22_01_2025_QD-m-nganh-TV-va-van-hoa-VN.pdf/2_ 310_QD_DHSPHN_22_01_2025_QD m nganh TV va van hoa VN.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/downloads/tuyensinh.hnue.edu.vn/api/v1/Portals/0/2_-[SP_19]-Xac-nhn-DK-Thc-t-ca-CSDT-nganh-Lch-s.pdf/2_ [SP_19] Xac nhn DK Thc t ca CSDT nganh Lch s.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/downloads/tuyensinh.hnue.edu.vn/api/v1/Portals/0/2_-[SP_19]-Xac-nhn-DK-Thc-t-ca-CSDT-nganh-Xa-hi-hc.pdf/2_ [SP_19] Xac nhn DK Thc t ca CSDT nganh Xa hi hc.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/downloads/tuyensinh.hnue.edu.vn/api/v1/Portals/0/2_-[SP_19]_Xac-nhn-DK-Thc-t-ca-CSDT-nganh-Vt-li-hc.pdf/2_ [SP_19]_Xac nhn DK Thc t ca CSDT nganh Vt li hc.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/downloads/tuyensinh.hnue.edu.vn/api/v1/Portals/0/3_-311_QD_DHSPHN_22_01_2025_QD-m-nganh-Vt-li-hc.pdf/3_ 311_QD_DHSPHN_22_01_2025_QD m nganh Vt li hc.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/downloads/tuyensinh.hnue.edu.vn/api/v1/Portals/0/4_-312_QD_DHSPHN_22_01_2025_QD-m-nganh-Xa-hi-hc.pdf/4_ 312_QD_DHSPHN_22_01_2025_QD m nganh Xa hi hc.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/downloads/tuyensinh.hnue.edu.vn/api/v1/Portals/0/5_-313_QD_DHSPHN_22_01_2025_QD-m-nganh-Lch-s_1.pdf/5_ 313_QD_DHSPHN_22_01_2025_QD m nganh Lch s_1.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/downloads/tuyensinh.hnue.edu.vn/api/v1/Portals/0/960_TB_DHSPHN_18_7_2025.pdf/960_TB_DHSPHN_18_7_2025.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/downloads/tuyensinh.hnue.edu.vn/api/v1/Portals/0/Ho-so-nhap-hoc-K75-CHINH-THUC.pdf/Ho-so-nhap-hoc-K75-CHINH-THUC.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/downloads/tuyensinh.hnue.edu.vn/api/v1/Portals/0/Huong-dan-nhap-hoc-K75-CHINH-THUC_1.pdf/Huong-dan-nhap-hoc-K75-CHINH-THUC_1.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/dtbdtx.hnue.edu.vn/Chuong-trinh-ao-tao/He-vua-hoc-vua-lam/content.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/dtbdtx.hnue.edu.vn/Chuong-trinh-ao-tao/He-vua-hoc-vua-lam/metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/dtbdtx.hnue.edu.vn/Tin-tuc-Su-kien/p/262/content.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/dtbdtx.hnue.edu.vn/Tin-tuc-Su-kien/p/262/metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/dtbdtx.hnue.edu.vn/Tin-tuc-Su-kien/p/467/content.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/dtbdtx.hnue.edu.vn/Tin-tuc-Su-kien/p/467/metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/gdth.hnue.edu.vn/content.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/gdth.hnue.edu.vn/metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/hnue.edu.vn/content.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/hnue.edu.vn/dao-tao/dai-hoc/content.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/hnue.edu.vn/dao-tao/dai-hoc/metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/hnue.edu.vn/dbcl/ba-cong-khai/content.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/hnue.edu.vn/dbcl/ba-cong-khai/metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/hnue.edu.vn/dbcl/kiem-dinh-chat-luong/content.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/hnue.edu.vn/dbcl/kiem-dinh-chat-luong/metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/hnue.edu.vn/gioi-thieu/bch-dang-bo/content.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/hnue.edu.vn/gioi-thieu/bch-dang-bo/metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/hnue.edu.vn/gioi-thieu/cac-khoa/content.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/hnue.edu.vn/gioi-thieu/cac-khoa/metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/hnue.edu.vn/gioi-thieu/lich-su-truyen-thong/content.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/hnue.edu.vn/gioi-thieu/lich-su-truyen-thong/metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/hnue.edu.vn/metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/hnue.edu.vn/nghien-cuu/hop-tac-nckh/content.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/hnue.edu.vn/nghien-cuu/hop-tac-nckh/metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/hnue.edu.vn/page_5f968a2b/content.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/hnue.edu.vn/page_5f968a2b/metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/hnue.edu.vn/page_932a1499/content.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/hnue.edu.vn/page_932a1499/metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/hnue.edu.vn/tin-tuc/10436/content.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/hnue.edu.vn/tin-tuc/10436/metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/hnue.edu.vn/tin-tuc/10678/content.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/hnue.edu.vn/tin-tuc/10678/metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/hnue.edu.vn/tin-tuc/10768/content.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/hnue.edu.vn/tin-tuc/10768/metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/hnue.edu.vn/tin-tuc/11042/content.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/hnue.edu.vn/tin-tuc/11042/metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/hnue.edu.vn/van-ban/tccb/content.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/hnue.edu.vn/van-ban/tccb/metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/lichsu.hnue.edu.vn/content.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/lichsu.hnue.edu.vn/metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/nguvan.hnue.edu.vn/content.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/nguvan.hnue.edu.vn/metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/psy.hnue.edu.vn/content.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/psy.hnue.edu.vn/metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/qlgd.hnue.edu.vn/content.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/qlgd.hnue.edu.vn/metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/sdh.hnue.edu.vn/content.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/sdh.hnue.edu.vn/metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/sdh.hnue.edu.vn/tuyen-sinh/thac-si/p/thong-bao-ket-qua-tuyen-sinh-trinh-do-thac-si-dot-3-nam-2025-7401/content.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/sdh.hnue.edu.vn/tuyen-sinh/thac-si/p/thong-bao-ket-qua-tuyen-sinh-trinh-do-thac-si-dot-3-nam-2025-7401/metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/sdh.hnue.edu.vn/tuyen-sinh/tien-si/content.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/sdh.hnue.edu.vn/tuyen-sinh/tien-si/metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/sdh.hnue.edu.vn/tuyen-sinh/tien-si/p/thong-bao-xet-tuyen-nghien-cuu-sinh-khoa-45-nam-2025-5206/content.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/sdh.hnue.edu.vn/tuyen-sinh/tien-si/p/thong-bao-xet-tuyen-nghien-cuu-sinh-khoa-45-nam-2025-5206/metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/triethoc.hnue.edu.vn/content.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/triethoc.hnue.edu.vn/metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/cacnganhdaotao/141/content.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/cacnganhdaotao/141/metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/cacnganhdaotao/384/content.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/cacnganhdaotao/384/metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/cacnganhdaotao/511/content.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/cacnganhdaotao/511/metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/cacnganhdaotao/512/content.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/cacnganhdaotao/512/metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/chuandaura/279/content.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/chuandaura/279/metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/chuandaura/281/content.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/chuandaura/281/metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/chuandaura/455/content.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/chuandaura/455/metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/chuandaura/458/content.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/chuandaura/458/metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/chuandaura/501/content.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/chuandaura/501/metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/chuandaura/content.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/chuandaura/metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/content.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/ketnoi/HVZ3x56rAac/content.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/ketnoi/HVZ3x56rAac/metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/ketnoi/MDjLTxZHwKM/content.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/ketnoi/MDjLTxZHwKM/metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/ketnoi/MTeekk2nYmU/content.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/ketnoi/MTeekk2nYmU/metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/ketnoi/NthMQHctJQg/content.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/ketnoi/NthMQHctJQg/metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/ketnoi/X08T7SSy5qY/content.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/ketnoi/X08T7SSy5qY/metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/ketnoi/Y1Ol9E9dK8Q/content.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/ketnoi/Y1Ol9E9dK8Q/metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/ketnoi/q2qnMA90nNQ/content.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/ketnoi/q2qnMA90nNQ/metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/ketnoi/rCfaih-yA_8/content.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/ketnoi/rCfaih-yA_8/metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/ketnoi/ykPrn6UWzuM/content.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/ketnoi/ykPrn6UWzuM/metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/khungchuongtrinh/315/content.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/khungchuongtrinh/315/metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/khungchuongtrinh/317/content.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/khungchuongtrinh/317/metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/khungchuongtrinh/318/content.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/khungchuongtrinh/318/metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/khungchuongtrinh/319/content.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/khungchuongtrinh/319/metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/khungchuongtrinh/320/content.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/khungchuongtrinh/320/metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/khungchuongtrinh/321/content.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/khungchuongtrinh/321/metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/khungchuongtrinh/323/content.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/khungchuongtrinh/323/metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/khungchuongtrinh/325/content.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/khungchuongtrinh/325/metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/khungchuongtrinh/326/content.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/khungchuongtrinh/326/metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/khungchuongtrinh/330/content.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/khungchuongtrinh/330/metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/khungchuongtrinh/332/content.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/khungchuongtrinh/332/metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/khungchuongtrinh/334/content.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/khungchuongtrinh/334/metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/khungchuongtrinh/335/content.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/khungchuongtrinh/335/metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/khungchuongtrinh/337/content.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/khungchuongtrinh/337/metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/khungchuongtrinh/341/content.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/khungchuongtrinh/341/metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/khungchuongtrinh/342/content.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/khungchuongtrinh/342/metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/khungchuongtrinh/345/content.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/khungchuongtrinh/345/metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/khungchuongtrinh/346/content.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/khungchuongtrinh/346/metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/khungchuongtrinh/347/content.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/khungchuongtrinh/347/metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/khungchuongtrinh/348/content.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/khungchuongtrinh/348/metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/khungchuongtrinh/349/content.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/khungchuongtrinh/349/metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/khungchuongtrinh/350/content.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/khungchuongtrinh/350/metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/khungchuongtrinh/351/content.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/khungchuongtrinh/351/metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/khungchuongtrinh/352/content.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/khungchuongtrinh/352/metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/khungchuongtrinh/353/content.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/khungchuongtrinh/353/metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/khungchuongtrinh/354/content.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/khungchuongtrinh/354/metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/khungchuongtrinh/355/content.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/khungchuongtrinh/355/metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/khungchuongtrinh/356/content.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/khungchuongtrinh/356/metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/khungchuongtrinh/391/content.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/khungchuongtrinh/391/metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/khungchuongtrinh/457/content.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/khungchuongtrinh/457/metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/khungchuongtrinh/459/content.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/khungchuongtrinh/459/metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/khungchuongtrinh/516/content.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/khungchuongtrinh/516/metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/khungchuongtrinh/517/content.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/khungchuongtrinh/517/metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/khungchuongtrinh/518/content.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/khungchuongtrinh/518/metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/khungchuongtrinh/519/content.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/khungchuongtrinh/519/metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/khungchuongtrinh/520/content.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/khungchuongtrinh/520/metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/khungchuongtrinh/content.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/khungchuongtrinh/metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/thong-bao (1)/content.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/thong-bao (1)/metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/tin-tuc/541/content.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/tin-tuc/541/metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/tin-tuc/546/content.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/tin-tuc/546/metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/tuyensinh2023/content.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/tuyensinh2023/metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/tuyensinh2025/content.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu (1).vn/tuyensinh2025/metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu.vn/page_45a5d379/content.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu.vn/page_45a5d379/metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu.vn/page_81947e9d/content.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu.vn/page_81947e9d/metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu.vn/page_af03e6a9/content.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/tuyensinh.hnue.edu.vn/page_af03e6a9/metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eda_output/boxplot_chunk_length.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eda_output/hist_chunk_length.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eda_output/top_domains.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rag/bootstrap.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rag/chatbot.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rag/llm_gemini.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tools/convert_docx_to_md.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tools/eda_analysis.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tools/eda_visualize.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tools/pandoc-3.8.3-windows-x86_64.msi" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cli/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/cli/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crawler/web_crawler.py" beforeDir="false" afterPath="$PROJECT_DIR$/crawler/web_crawler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rag/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/rag/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rag/markdown_loader.py" beforeDir="false" afterPath="$PROJECT_DIR$/rag/markdown_loader.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rag/rag_chatbot.py" beforeDir="false" afterPath="$PROJECT_DIR$/rag/rag_chatbot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rag/text_chunker.py" beforeDir="false" afterPath="$PROJECT_DIR$/rag/text_chunker.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rag/vector_store.py" beforeDir="false" afterPath="$PROJECT_DIR$/rag/vector_store.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_env.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_env.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,33 +249,49 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 4
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "duyenne19"
+  }
 }]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/duyenne19/chatbothnue.git",
+    "accountId": "c6d7ad6f-bb6f-40aa-a570-8adb48cfbe96"
+  }
+}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
   <component name="ProjectId" id="36vKhudjOZ53r7d2VbDQHWYku2y" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Python.config.executor": "Debug",
-    "Python.main.executor": "Run",
-    "Python.rag_chatbot.executor": "Run",
-    "Python.test_crawl.executor": "Run",
-    "Python.test_env.executor": "Run",
-    "Python.test_import.executor": "Run",
-    "Python.web_crawler.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python.config.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.convert_docx_to_md.executor&quot;: &quot;Run&quot;,
+    &quot;Python.eda_analysis.executor&quot;: &quot;Run&quot;,
+    &quot;Python.eda_visualize.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.rag_chatbot.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test_crawl.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test_env.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test_import.executor&quot;: &quot;Run&quot;,
+    &quot;Python.web_crawler.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -85,6 +307,23 @@
       <option name="presentableId" value="Default" />
       <updated>1765881727534</updated>
     </task>
+    <task id="LOCAL-00001" summary="chat_goc">
+      <option name="closed" value="true" />
+      <created>1765896922954</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1765896922954</updated>
+    </task>
+    <task id="LOCAL-00002" summary="chat_goc">
+      <option name="closed" value="true" />
+      <created>1765896985371</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1765896985371</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -92,11 +331,27 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="chat_goc" />
+    <option name="LAST_COMMIT_MESSAGE" value="chat_goc" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -1,3 +1,5 @@
+from dotenv import load_dotenv
 import os
 
-print("GEMINI_API_KEY =", os.environ.get("GEMINI_API_KEY"))
+load_dotenv()
+print(os.getenv("GEMINI_API_KEY"))
